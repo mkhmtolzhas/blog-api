@@ -60,7 +60,7 @@ class Post(AbstractBaseModel):
     title = CharField(max_length=TITLE_MAX_LENGTH)
     slug = SlugField(unique=True)
     content = TextField()
-    category = ForeignKey(Category, on_delete=CASCADE, related_name="posts")
+    category = ForeignKey(Category, on_delete=SET_NULL, related_name="posts", null=True)
     tags = ManyToManyField(Tag, related_name="posts", blank=True)
     status = CharField(choices=StatusChoices.choices, default=StatusChoices.DRAFT)
     created_at = DateTimeField(auto_now_add=True)
