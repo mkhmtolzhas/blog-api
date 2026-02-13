@@ -11,7 +11,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 WSGI_APPLICATION = "settings.wsgi.application"
 ROOT_URLCONF = "settings.urls"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-AUTH_USER_MODEL = "auths.User"
+# AUTH_USER_MODEL = "auths.User"
 
 
 # ----------------------------------------------------------------
