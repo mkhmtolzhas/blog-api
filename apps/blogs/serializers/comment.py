@@ -11,7 +11,7 @@ class CommentSerializer(ModelSerializer):
         model = Comments
         fields = [
             "id",
-            "content",
+            "body",
             "created_at",
             "updated_at",
             "author",
