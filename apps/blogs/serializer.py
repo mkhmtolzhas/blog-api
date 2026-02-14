@@ -1,5 +1,4 @@
-from rest_framework.serializers import (CharField, DateTimeField, IntegerField,
-                                        ModelSerializer, SlugField)
+from rest_framework.serializers import CharField, ModelSerializer, SlugField
 
 from apps.blogs.models import Category, Comments, Post, Tag
 
@@ -35,8 +34,6 @@ class PostSerializer(ModelSerializer):
             "categories",
             "tags",
         ]
-
-
 
 
 class CommentSerializer(ModelSerializer):

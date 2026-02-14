@@ -26,4 +26,3 @@ class AbstractBaseModel(Model):
 
         self.deleted_at = django_timezone.now()
         self.save(update_fields=["deleted_at"])
-
