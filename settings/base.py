@@ -11,16 +11,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 WSGI_APPLICATION = "settings.wsgi.application"
 ROOT_URLCONF = "settings.urls"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-AUTH_USER_MODEL = "auths.User"
+AUTH_USER_MODEL = "users.User"
 
 
 # ----------------------------------------------------------------
 # Apps
 #
 DJANGO_AND_THIRD_PARTY_APPS = [
-    "unfold",
-    "unfold.contrib.filters",
-    "unfold.contrib.forms",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -28,26 +25,15 @@ DJANGO_AND_THIRD_PARTY_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "django_filters",
-    "drf_spectacular",
+    "rest_framework_simplejwt",
 ]
 
 PROJECT_APPS = [
     "apps.abstracts",
-    "apps.auths",
-    "apps.listings",
-    "apps.locations",
+    "apps.users",
+    "apps.blogs"
 ]
 INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
-
-# ----------------------------------------------------------------
-# Unfold Settings
-#
-UNFOLD = {
-    "SITE_TITLE": "Django Admin",
-    "SITE_HEADER": "Django Admin",
-    "SITE_SYMBOL": "speed",
-}
 
 
 # ----------------------------------------------------------------

@@ -115,4 +115,5 @@ media/
 # Ruff cache
 .ruff_cache/
 
-
+# Logs
+logs/

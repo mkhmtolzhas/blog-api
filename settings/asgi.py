@@ -10,4 +10,3 @@ assert (
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", f"settings.env.{ENV_ID}")
 
 application = get_asgi_application()
-

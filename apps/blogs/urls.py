@@ -1,0 +1,31 @@
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
+
+from apps.blogs.views.category import CategoryViewSet
+from apps.blogs.views.post import PostViewSet
+from apps.blogs.views.tag import TagViewSet
+
+router = DefaultRouter(trailing_slash=False)
+
+router.register(
+    prefix="tags",
+    viewset=TagViewSet,
+    basename="tags",
+)
+
+router.register(
+    prefix="categories",
+    viewset=CategoryViewSet,
+    basename="categories",
+)
+
+router.register(
+    prefix="posts",
+    viewset=PostViewSet,
+    basename="posts",
+)
+
+
+urlpatterns = [
+    path("blogs/", include(router.urls)),
+]
